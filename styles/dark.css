@@ -9,4 +9,10 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: #FF0070;
+  --text-color: #F1B2CE;
+  --header__title-color: #DB00FF;
+  --header__text-color: #000028;
+  --button-color: var(--accent-color) ;
+  --main-title: var(--accent-color) ;
 }
