@@ -84,8 +84,9 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
+  width: 70px;
+  height: 26px;
 }
-
 
 .header__theme-menu-list {
   display: flex;
@@ -94,11 +95,6 @@
   margin-right: 9px;
   color: var(--button-color);
   gap: 1px;
-}
-
-.header__theme-menu-button {
-  width: 70px;
-  height: 26px;
 }
 
 .header__theme-menu-button_active {
