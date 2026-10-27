@@ -113,7 +113,6 @@
     gap: 20px;
     grid-template-columns: 236px 1fr;
     grid-template-rows: repeat(5, min-content 1fr);
-    margin-top: 60px;
     row-gap: 0;
   }
 
@@ -232,6 +231,7 @@
   }
 
   .footer {
+    height: 100vh;
     min-height: 768px;
   }
 
@@ -255,7 +255,6 @@
     margin-top: 30px;
     margin-bottom: 70px;
     gap: 95px;
-
   }
 
   .header__top {
@@ -316,6 +315,7 @@
   }
 
   .footer {
+    height: 100vh;
     min-height: 1024px;
   }
 
