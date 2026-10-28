@@ -10,7 +10,7 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: 'IBM Plex mono', monospace;
 }
 
 h1,
@@ -42,17 +42,6 @@ a {
   line-height: inherit;
 }
 
-button:hover {
-  border: 1px solid color-mix(in srgb, var(--button-color) 40%, transparent);
-}
-button:focus-visible {
-  border-bottom: 1px solid var(--button-color);
-}
-
-a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--text-color);
-}
-a:focus-visible {
-  border: 1px solid var(--text-color);
+a {
+  text-decoration: none;
 }
