@@ -10,4 +10,7 @@
   --header__text-color: #000028;
   --button-color: var(--accent-color) ;
   --main-title: var(--accent-color) ;
+  --display-rec: flex;
+  --background-color: #000028;
+  --background-image: url("../images/cover-image-dark.png");
 } 

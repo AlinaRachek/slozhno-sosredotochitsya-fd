@@ -1,8 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-image: url("../images/cover-image-dark.png");
-  background-color: #000028;
+  background-image: var(--background-image);
+  background-color: var(--background-color);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -15,29 +15,25 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-width: 1px 1px 0 0;
   border-style: solid;
   border-color: var(--button-color);
-  margin-top: 1%;
-  margin-right: 1%;
 }
 
 .decorated-zone::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-width: 0 0 1px 1px;
   border-style: solid;
   border-color: var(--button-color);
-  margin-bottom: 1%;
-  margin-left: 1%;
 }
 
 .header {
@@ -53,7 +49,8 @@
 }
 
 .rec {
-  display: flex;
+  display: var(--display-rec);
+  visibility: var(--visibility-rec);
   text-transform: uppercase;
   position: absolute;
   top: 10px;
@@ -113,7 +110,7 @@
 }
 
 .title-decor {
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 
 .header__text {
@@ -127,19 +124,7 @@
   margin: 41px 10px 66px 10px;
 }
 
-.reasons {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 50px;
-}
-
-.distractions {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 50px;
-}
-
-.tips {
+.section {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 50px;
@@ -210,9 +195,9 @@
 
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--header__title-color);
   font-weight: 700;
-  line-height: 23.4px;
+  line-height: 116%;
+  color: var(--header__title-color);
   align-self: center;
 }
 
@@ -242,24 +227,28 @@ a:focus-visible {
 
 
 @media (min-width: 768px) {
-  body {
-    min-width: 768px;
-  }
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     display: flex;
     flex-direction: row;
     margin: 123px 0px 0 0px;
   }
-  .decorated-zone::before {
-    margin-top: 20px;
-    margin-right: 20px;
-  }
+
   .rec {
-    position: absolute;
     top: 20px;
     right: 29px;
   }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
   .header__theme-menu-list {
     margin-top: 180px;
     margin-right: 20px;
@@ -267,10 +256,6 @@ a:focus-visible {
 
   .header__text {
     margin: 43px 20px 183px 384px;
-  }
-  .decorated-zone::after {
-    margin-bottom: 20px;
-    margin-left: 20px;
   }
 
   .section {
@@ -296,11 +281,6 @@ a:focus-visible {
 
   .title {
     margin-top: 20px;
-    color: var(--main-title);
-    background-color: transparent;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 23.4px;
     min-width: 230px;
 }
 
@@ -315,18 +295,18 @@ a:focus-visible {
   .gallery {
     padding-top: 9px;
     margin-right: 20px;
+    margin-left: 20px;
   }
 
   .gallery-list {
     margin-top: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas: 
       "one one two"
       "three four two "
       "three five five";
     gap: 20px;
-    max-height: 780px;
   }
 
   .gallery__image {
@@ -356,7 +336,6 @@ a:focus-visible {
   }
 
   .footer {
-    height: 100vh;
     min-height: 1024px;
     margin-top: 60px;
   }
@@ -364,18 +343,15 @@ a:focus-visible {
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-top: 5px;
+    line-height: 83%;
   }
 }
 
 
 
 @media (min-width: 1024px) {
-  body {
-    min-width: 1024px;
-  }
   .header__theme-menu-list {
     margin: 20px 0 0 0;
-    display: flex;
     flex-direction: row;
     gap: 8px;
   }
@@ -409,22 +385,21 @@ a:focus-visible {
 
   .distractions .cards-list {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 19px;
   }
 
   .distractions .card {
-    min-width: 315px;
+    flex: 1 1 315px;
+    min-width: 0;
   }
 
   .footer {
     height: 100vh;
     min-height: 768px;
-    margin-top: 511px;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .rec {
-    visibility: hidden;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

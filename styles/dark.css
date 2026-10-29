@@ -15,23 +15,7 @@
   --header__text-color: #000028;
   --button-color: var(--accent-color) ;
   --main-title: var(--accent-color) ;
-  .page {
-    background-image: url("../images/cover-image-dark.png");
-    background-color: #000028;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent-color: #FF0070;
-    --text-color: #F1B2CE;
-    --header__title-color: #DB00FF;
-    --header__text-color: #000028;
-    --button-color: var(--accent-color) ;
-    --main-title: var(--accent-color) ;
-  }
-  .page {
-    background-image: url("../images/cover-image-dark.png");
-    background-color: #000028;
-  }
+  --background-color: #000028;
+  --background-image: url("../images/cover-image-dark.png");
+  --visibility-rec: visible; 
 }
