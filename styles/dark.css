@@ -13,9 +13,9 @@
   --text-color: #F1B2CE;
   --header__title-color: #DB00FF;
   --header__text-color: #000028;
-  --button-color: var(--accent-color) ;
-  --main-title: var(--accent-color) ;
+  --button-color: var(--accent-color);
+  --main-title: var(--accent-color);
   --background-color: #000028;
   --background-image: url("../images/cover-image-dark.png");
-  --visibility-rec: visible; 
+  --visibility-rec: visible;
 }

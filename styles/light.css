@@ -31,6 +31,6 @@
     --main-title: var(--text-color);
     --background-image: url("../images/cover-image-light.png");
     --background-color: #fff1f7;
-    --visibility-rec: hidden; 
+    --visibility-rec: hidden;
   }
 }
