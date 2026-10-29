@@ -17,9 +17,8 @@
   --header__text-color: var(--text-color);
   --button-color: var(--text-color);
   --main-title: var(--text-color);
-  --visibility-rec: hidden; 
+  --visibility-rec: hidden;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
