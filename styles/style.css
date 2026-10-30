@@ -107,10 +107,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   color: var(--header__title-color);
-}
-
-.title-decor {
-  text-shadow: 2px 2px 0px 0px var(--accent-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
 }
 
 .header__text {
@@ -196,9 +193,10 @@
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  line-height: 116%;
+  line-height: 83%;
   color: var(--header__title-color);
   align-self: center;
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 
@@ -334,7 +332,6 @@ a:focus-visible {
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-top: 5px;
-    line-height: 83%;
   }
 }
 
@@ -385,8 +382,6 @@ a:focus-visible {
   }
 
   .footer {
-    height: 100vh;
     min-height: 768px;
-    margin-top: 60px;
   }
 }
